@@ -1,0 +1,11 @@
+
+# e.g. ~/cloudflared/docker-compose.yml  (its own project)
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: always
+    network_mode: host
+    env_file:
+      - variables.env
+    command: tunnel --no-autoupdate run
