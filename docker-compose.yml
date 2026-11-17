@@ -8,4 +8,5 @@ services:
     network_mode: host
     env_file:
       - variables.env
+    # the command will read the TUNNEL_TOKEN from the environment file and don't need to add ${TUNNEL_TOKEN} explicitly. 
     command: tunnel --no-autoupdate run
